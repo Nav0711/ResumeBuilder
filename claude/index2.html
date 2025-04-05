@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Builder</title>
+    <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <h1>Your Resume Generator</h1>
+            <ul class="nav-links">
+                <li><a href="#">About</a></li>
+                <li><a href="#">Generate Resume</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h2>Build Your Resume in Minutes</h2>
+            <p>Create a professional resume with our easy-to-use generator.</p>
+            <a href="#form-section" class="startBtn">Get Started</a>
+        </div>
+    </section>
+
+    <section id="form-section" class="form-container">
+        <h2>Enter Your Details</h2>
+        <form id="resumeForm">
+            <div class="form-group">
+                <h3>Personal Information</h3>
+                <div class="input-group">
+                    <label for="fullName">Full Name</label>
+                    <input type="text" id="fullName" name="fullName" required>
+                </div>
+                <div class="input-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="input-group">
+                    <label for="phone">Phone</label>
+                    <input type="tel" id="phone" name="phone">
+                </div>
+                <div class="input-group">
+                    <label for="location">Location</label>
+                    <input type="text" id="location" name="location">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <h3>Professional Summary</h3>
+                <div class="input-group">
+                    <label for="summary">Summary</label>
+                    <textarea id="summary" name="summary" rows="4"></textarea>
+                </div>
+            </div>
+
+            <div class="form-group" id="education-container">
+                <h3>Education</h3>
+                <div class="education-entry">
+                    <div class="input-group">
+                        <label for="degree">Degree</label>
+                        <input type="text" class="degree" name="degree">
+                    </div>
+                    <div class="input-group">
+                        <label for="school">School</label>
+                        <input type="text" class="school" name="school">
+                    </div>
+                    <div class="input-group">
+                        <label for="graduationYear">Graduation Year</label>
+                        <input type="text" class="graduationYear" name="graduationYear">
+                    </div>
+                </div>
+                <button type="button" id="addEducation" class="add-btn">Add More Education</button>
+            </div>
+
+            <div class="form-group" id="experience-container">
+                <h3>Work Experience</h3>
+                <div class="experience-entry">
+                    <div class="input-group">
+                        <label for="jobTitle">Job Title</label>
+                        <input type="text" class="jobTitle" name="jobTitle">
+                    </div>
+                    <div class="input-group">
+                        <label for="company">Company</label>
+                        <input type="text" class="company" name="company">
+                    </div>
+                    <div class="input-group">
+                        <label for="employmentPeriod">Employment Period</label>
+                        <input type="text" class="employmentPeriod" name="employmentPeriod" placeholder="e.g. Jan 2020 - Present">
+                    </div>
+                    <div class="input-group">
+                        <label for="jobDescription">Job Description</label>
+                        <textarea class="jobDescription" name="jobDescription" rows="3"></textarea>
+                    </div>
+                </div>
+                <button type="button" id="addExperience" class="add-btn">Add More Experience</button>
+            </div>
+
+            <div class="form-group" id="skills-container">
+                <h3>Skills</h3>
+                <div class="input-group">
+                    <label for="skills">Skills (comma separated)</label>
+                    <input type="text" id="skills" name="skills" placeholder="e.g. JavaScript, HTML, CSS, Project Management">
+                </div>
+            </div>
+
+            <button type="submit" class="submit-btn">Generate Resume</button>
+        </form>
+    </section>
+
+    <section id="resume-preview" class="hidden">
+        <h2>Your Resume Preview</h2>
+        <div class="resume-container">
+            <div class="resume-header">
+                <h1 id="preview-name"></h1>
+                <div class="contact-info">
+                    <p id="preview-email"></p>
+                    <p id="preview-phone"></p>
+                    <p id="preview-location"></p>
+                </div>
+            </div>
+            
+            <div class="resume-section">
+                <h2>Professional Summary</h2>
+                <p id="preview-summary"></p>
+            </div>
+            
+            <div class="resume-section">
+                <h2>Education</h2>
+                <div id="preview-education"></div>
+            </div>
+            
+            <div class="resume-section">
+                <h2>Work Experience</h2>
+                <div id="preview-experience"></div>
+            </div>
+            
+            <div class="resume-section">
+                <h2>Skills</h2>
+                <div id="preview-skills"></div>
+            </div>
+        </div>
+        <button id="printResume" class="print-btn">Print Resume</button>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Resume Builder. All rights reserved.</p>
+    </footer>
+
+    <script src="script2.js"></script>
+</body>
+</html>
