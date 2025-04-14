@@ -14,11 +14,35 @@ body {
     line-height: 1.6;
     color: #ccc;
     background-color: #0A0A0A;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+section, .form-container, .resume-container {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.8s ease-out forwards;
+}
+
+section:nth-child(even), .form-container:nth-child(even) {
+    animation-delay: 0.2s;
 }
 
 a {
     text-decoration: none;
     color: inherit;
+    transition: color 0.3s ease;
 }
 
 /* Header and Navigation */
@@ -48,11 +72,27 @@ nav {
 
 .nav-links a {
     font-weight: bold;
-    transition: color 0.3s;
+    position: relative;
+    overflow: hidden;
+}
+
+.nav-links a::after {
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background-color: #1E90FF;
+    transition: width 0.3s;
 }
 
 .nav-links a:hover {
     color: #1E90FF;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
 }
 
 /* Hero Section */
@@ -85,11 +125,13 @@ nav {
     padding: 0.8rem 2rem;
     border-radius: 30px;
     font-weight: bold;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .startBtn:hover {
     background-color: #cc2f33;
+    transform: scale(1.05);
+    box-shadow: 0 0 12px rgba(255, 59, 63, 0.4);
 }
 
 /* Form Styles */
@@ -114,6 +156,12 @@ nav {
     padding: 1.5rem;
     background-color: #1e1e1e;
     border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-group:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 4px 12px rgba(255, 255, 255, 0.1);
 }
 
 .form-group h3 {
@@ -140,24 +188,54 @@ input, textarea {
     font-size: 1rem;
     background-color: #1a1a1a;
     color: #e0e0e0;
+    transition: border-color 0.3s;
+}
+
+input:focus, textarea:focus {
+    outline: none;
+    border-color: #1E90FF;
 }
 
 textarea {
     resize: vertical;
 }
 
-.add-btn {
+.add-btn, .submit-btn, .print-btn, .remove-btn {
     background-color: #1E90FF;
     color: white;
     border: none;
     padding: 0.5rem 1rem;
     border-radius: 4px;
     cursor: pointer;
-    margin-top: 1rem;
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-.add-btn:hover {
+.add-btn:hover,
+.submit-btn:hover,
+.print-btn:hover,
+.remove-btn:hover {
     background-color: #007acc;
+    transform: scale(1.05);
+    box-shadow: 0 0 12px rgba(30, 144, 255, 0.4);
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 1rem;
+    font-size: 1.1rem;
+    background-color: #27AE60;
+}
+
+.submit-btn:hover {
+    background-color: #1f8f4d;
+}
+
+.remove-btn {
+    background-color: #FF3B3F;
+}
+
+.remove-btn:hover {
+    background-color: #cc2f33;
 }
 
 .education-entry, .experience-entry {
@@ -166,23 +244,12 @@ textarea {
     border-radius: 4px;
     margin-bottom: 1rem;
     box-shadow: 0 0 5px rgba(255, 255, 255, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.submit-btn {
-    display: block;
-    width: 100%;
-    background-color: #27AE60;
-    color: white;
-    border: none;
-    padding: 1rem;
-    font-size: 1.1rem;
-    border-radius: 4px;
-    cursor: pointer;
-    margin-top: 1rem;
-}
-
-.submit-btn:hover {
-    background-color: #1f8f4d;
+.education-entry:hover, .experience-entry:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 4px 12px rgba(255, 255, 255, 0.1);
 }
 
 /* Resume Preview Styles */
@@ -269,31 +336,7 @@ textarea {
     font-size: 0.9rem;
 }
 
-.print-btn {
-    display: block;
-    width: 100%;
-    background-color: #1E90FF;
-    color: white;
-    border: none;
-    padding: 1rem;
-    font-size: 1.1rem;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
-.print-btn:hover {
-    background-color: #007acc;
-}
-
-.remove-btn {
-    background-color: #FF3B3F;
-    color: white;
-    border: none;
-    padding: 0.5rem 1rem;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
+/* Print Styles */
 @media print {
     body * {
         visibility: hidden;
@@ -333,5 +376,4 @@ footer {
     .nav-links li {
         margin: 0 1rem;
     }
-    
-    .
+}
