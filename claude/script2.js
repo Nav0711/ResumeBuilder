@@ -82,6 +82,8 @@ document.addEventListener('DOMContentLoaded', function() {
     printResumeBtn.addEventListener('click', function() {
         window.print();
     });
+
+    
     
     // Generate resume from form data
     function generateResume() {
@@ -176,4 +178,4 @@ document.addEventListener('DOMContentLoaded', function() {
             e.target.style.marginTop = '0.5rem';
         }
     });
-}); 
+});

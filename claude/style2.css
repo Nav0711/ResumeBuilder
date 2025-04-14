@@ -291,6 +291,22 @@ textarea {
     background-color: #2980b9;
 }
 
+
+@media print {
+    body * {
+        visibility: hidden;
+    }
+    #resume-preview, #resume-preview * {
+        visibility: visible;
+    }
+    #resume-preview {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+    }
+}
+
 /* Footer */
 footer {
     background-color: #2c3e50;
