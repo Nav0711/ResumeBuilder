@@ -6,18 +6,15 @@
     font-family: 'Arial', sans-serif;
 }
 
-
 html {
     scroll-behavior: smooth;
 }
 
 body {
     line-height: 1.6;
-    color: #333;
-    background-color: #000000;;
+    color: #ccc;
+    background-color: #0A0A0A;
 }
-
-
 
 a {
     text-decoration: none;
@@ -26,8 +23,8 @@ a {
 
 /* Header and Navigation */
 header {
-    background-color: #000000;
-    color: rgb(255, 255, 255);
+    background-color: #0D0D0D;
+    color: #ffffff;
     padding: 1rem 5%;
     position: sticky;
     top: 0;
@@ -55,12 +52,12 @@ nav {
 }
 
 .nav-links a:hover {
-    color: #3498db;
+    color: #1E90FF;
 }
 
 /* Hero Section */
 .hero {
-    background: linear-gradient(135deg, #07283e, #2c3e50);
+    background: linear-gradient(135deg, #111111, #1a1a1a);
     color: white;
     text-align: center;
     padding: 4rem 1rem;
@@ -83,7 +80,7 @@ nav {
 
 .startBtn {
     display: inline-block;
-    background-color: #e74c3c;
+    background-color: #FF3B3F;
     color: white;
     padding: 0.8rem 2rem;
     border-radius: 30px;
@@ -92,7 +89,7 @@ nav {
 }
 
 .startBtn:hover {
-    background-color: #c0392b;
+    background-color: #cc2f33;
 }
 
 /* Form Styles */
@@ -100,10 +97,10 @@ nav {
     max-width: 900px;
     margin: 3rem auto;
     padding: 2rem;
-    background-color: rgb(0, 0, 0);
+    background-color: #121212;
     border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    color: white;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.05);
+    color: #e0e0e0;
 }
 
 .form-container h2 {
@@ -115,14 +112,13 @@ nav {
 .form-group {
     margin-bottom: 2rem;
     padding: 1.5rem;
-    background-color: #252222;
+    background-color: #1e1e1e;
     border-radius: 8px;
-    color: white
 }
 
 .form-group h3 {
     margin-bottom: 1rem;
-    border-bottom: 2px solid #3498db;
+    border-bottom: 2px solid #1E90FF;
     padding-bottom: 0.5rem;
 }
 
@@ -139,11 +135,11 @@ label {
 input, textarea {
     width: 100%;
     padding: 0.8rem;
-    border: 1px solid #393939;
+    border: 1px solid #333;
     border-radius: 4px;
     font-size: 1rem;
-    background-color: rgb(27, 27, 27);
-    color: white   ;
+    background-color: #1a1a1a;
+    color: #e0e0e0;
 }
 
 textarea {
@@ -151,7 +147,7 @@ textarea {
 }
 
 .add-btn {
-    background-color: #3498db;
+    background-color: #1E90FF;
     color: white;
     border: none;
     padding: 0.5rem 1rem;
@@ -161,21 +157,21 @@ textarea {
 }
 
 .add-btn:hover {
-    background-color: #2980b9;
+    background-color: #007acc;
 }
 
 .education-entry, .experience-entry {
     padding: 1rem;
-    background-color: rgb(27, 27, 27);
+    background-color: #1a1a1a;
     border-radius: 4px;
     margin-bottom: 1rem;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.05);
 }
 
 .submit-btn {
     display: block;
     width: 100%;
-    background-color: #2ecc71;
+    background-color: #27AE60;
     color: white;
     border: none;
     padding: 1rem;
@@ -186,7 +182,7 @@ textarea {
 }
 
 .submit-btn:hover {
-    background-color: #27ae60;
+    background-color: #1f8f4d;
 }
 
 /* Resume Preview Styles */
@@ -198,32 +194,32 @@ textarea {
     max-width: 900px;
     margin: 3rem auto;
     padding: 2rem;
-    background-color: white;
+    background-color: #121212;
     border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.05);
 }
 
 #resume-preview h2 {
     text-align: center;
     margin-bottom: 2rem;
-    color: #2c3e50;
+    color: #1E90FF;
 }
 
 .resume-container {
     padding: 2rem;
-    border: 1px solid #ddd;
+    border: 1px solid #333;
     margin-bottom: 2rem;
 }
 
 .resume-header {
     text-align: center;
     margin-bottom: 2rem;
-    border-bottom: 2px solid #3498db;
+    border-bottom: 2px solid #1E90FF;
     padding-bottom: 1rem;
 }
 
 .resume-header h1 {
-    color: #2c3e50;
+    color: #e0e0e0;
     font-size: 2rem;
     margin-bottom: 0.5rem;
 }
@@ -233,6 +229,7 @@ textarea {
     flex-wrap: wrap;
     justify-content: center;
     gap: 1rem;
+    color: #ccc;
 }
 
 .resume-section {
@@ -240,24 +237,21 @@ textarea {
 }
 
 .resume-section h2 {
-    color: #3498db;
+    color: #1E90FF;
     font-size: 1.4rem;
-    border-bottom: 1px solid #ddd;
+    border-bottom: 1px solid #333;
     padding-bottom: 0.5rem;
     margin-bottom: 1rem;
 }
 
-.education-item, .experience-item {
-    margin-bottom: 1rem;
-}
-
 .education-item h3, .experience-item h3 {
-    color: #2c3e50;
+    color: #ffffff;
     margin-bottom: 0.3rem;
 }
 
 .experience-item p {
     margin-bottom: 0.5rem;
+    color: #bbb;
 }
 
 .skills-list {
@@ -267,18 +261,18 @@ textarea {
 }
 
 .skill-tag {
-    background-color: #f0f8ff;
+    background-color: #1a1a1a;
     padding: 0.3rem 0.8rem;
     border-radius: 20px;
-    border: 1px solid #3498db;
-    color: #3498db;
+    border: 1px solid #1E90FF;
+    color: #1E90FF;
     font-size: 0.9rem;
 }
 
 .print-btn {
     display: block;
     width: 100%;
-    background-color: #3498db;
+    background-color: #1E90FF;
     color: white;
     border: none;
     padding: 1rem;
@@ -288,9 +282,17 @@ textarea {
 }
 
 .print-btn:hover {
-    background-color: #2980b9;
+    background-color: #007acc;
 }
 
+.remove-btn {
+    background-color: #FF3B3F;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+}
 
 @media print {
     body * {
@@ -309,8 +311,8 @@ textarea {
 
 /* Footer */
 footer {
-    background-color: #2c3e50;
-    color: white;
+    background-color: #111;
+    color: #aaa;
     text-align: center;
     padding: 1.5rem;
     margin-top: 3rem;
@@ -332,50 +334,4 @@ footer {
         margin: 0 1rem;
     }
     
-    .hero h2 {
-        font-size: 2rem;
-    }
-    
-    .contact-info {
-        flex-direction: column;
-        align-items: center;
-    }
-}
-
-@media (max-width: 480px) {
-    .form-container, #resume-preview {
-        padding: 1rem;
-    }
-    
-    .form-group {
-        padding: 1rem;
-    }
-    
-    .resume-container {
-        padding: 1rem;
-    }
-    
-    .hero h2 {
-        font-size: 1.8rem;
-    }
-    
-    .hero p {
-        font-size: 1rem;
-    }
-}
-
-@media print {
-    header, footer, .form-container, .print-btn {
-        display: none;
-    }
-    
-    #resume-preview {
-        box-shadow: none;
-        margin: 0;
-        padding: 0;
-    }
-    
-    .resume-container {
-        border: none;
-    }
-}
+    .
