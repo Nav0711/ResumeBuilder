@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Resume Builder</title>
     <link rel="stylesheet" href="style2.css">
 </head>
+
 <body>
     <header>
         <nav>
@@ -88,7 +90,8 @@
                     </div>
                     <div class="input-group">
                         <label for="employmentPeriod">Employment Period</label>
-                        <input type="text" class="employmentPeriod" name="employmentPeriod" placeholder="e.g. Jan 2020 - Present">
+                        <input type="text" class="employmentPeriod" name="employmentPeriod"
+                            placeholder="e.g. Jan 2020 - Present">
                     </div>
                     <div class="input-group">
                         <label for="jobDescription">Job Description</label>
@@ -102,7 +105,8 @@
                 <h3>Skills</h3>
                 <div class="input-group">
                     <label for="skills">Skills (comma separated)</label>
-                    <input type="text" id="skills" name="skills" placeholder="e.g. JavaScript, HTML, CSS, Project Management">
+                    <input type="text" id="skills" name="skills"
+                        placeholder="e.g. JavaScript, HTML, CSS, Project Management">
                 </div>
             </div>
 
@@ -111,7 +115,7 @@
     </section>
 
     <section id="resume-preview" class="hidden">
-        <h2>Your Resume Preview</h2>
+        <h2 id="PreviewHeading">Your Resume Preview</h2>
         <div class="resume-container">
             <div class="resume-header">
                 <h1 id="preview-name"></h1>
@@ -125,17 +129,17 @@
                 <h2>Professional Summary</h2>
                 <p id="preview-summary"></p>
             </div>
-            
+
             <div class="resume-section">
                 <h2>Education</h2>
                 <div id="preview-education"></div>
             </div>
-            
+
             <div class="resume-section">
                 <h2>Work Experience</h2>
                 <div id="preview-experience"></div>
             </div>
-            
+
             <div class="resume-section">
                 <h2>Skills</h2>
                 <div id="preview-skills"></div>
@@ -150,4 +154,5 @@
 
     <script src="script2.js"></script>
 </body>
+
 </html>

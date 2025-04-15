@@ -80,7 +80,15 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Print resume functionality
     printResumeBtn.addEventListener('click', function() {
-        window.print();
+
+        resumePreview.classList.remove('hidden');
+
+        setTimeout(() => {
+            window.print();
+
+            resumePreview.classList.add('hidden');
+        }, 100);
+
     });
 
     
